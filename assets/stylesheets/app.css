@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+/* Root VAriables */
+:root {
+    --main-color: #00abf0;
+    --bg-color: #081b29;
+    --text-main-color: #ededed;
+    --secondary-bg-color:  #112e42;
+}
+
+/* Whole HTML Doc */
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+/* BODY */
+body {
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
+}
+
+/* Navabr */
+.navbar {
+    background-color: var(--bg-color);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2rem;
+    padding-left: 1rem;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-right: 1rem;
+}
+
+.navbar ul li {
+    padding: 0 1rem;
+}
+
+.navbar ul li a {
+    color: var(--text-main-color);
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 0 1rem;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: var(--main-color);
+}
+
+.navbar .login {
+    color: var(--text-main-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navbar .login .btn{
+    display: inline-block;
+    color: var(--text-main-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.8rem;
+    margin: 0 0.3rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid var(--text-main-color);
+    transition: all 0.3s ease;
+}

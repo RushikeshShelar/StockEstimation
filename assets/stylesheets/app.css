@@ -31,17 +31,18 @@ html {
 /* BODY */
 body {
     background-color: var(--secondary-bg-color);
-    color: var(--text-color);
+    color: var(--text-main-color);
 }
 
 /* Navabr */
 .navbar {
     background-color: var(--bg-color);
     padding: 1rem 0;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
+    height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,4 +100,132 @@ body {
     cursor: pointer;
     border: 1px solid var(--text-main-color);
     transition: all 0.3s ease;
+}
+
+#menu-icon {
+    position: relative;
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+.main{
+    background-image: url('/assets/images/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    width: 100%;
+}
+
+
+.login-form{
+    display: none;
+    transition: all 0.3s ease;
+ }
+
+ .login-form.active{
+    min-height: 90vh;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 1s ease;
+
+ }
+
+.wrapper{
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(100%);
+    width: 35rem;
+    color: var(--text-main-color);
+    border-radius: 15px;
+    padding: 2rem 1.5rem 1rem 1.5rem;
+}
+
+.wrapper h2{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    width: 100%;
+    height: 3.5rem;
+    margin: 1.5rem 0 3.5rem 0;
+}
+.wrapper .input-box label{
+    margin: 0 0 20px 12px;
+    font-size: 1.2rem;
+}
+
+.input-box input{
+    width: 100%;
+    height: 85%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    color: var(--text-main-color);
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color: var(--text-main-color);
+}
+
+.wrapper .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.25rem;
+    margin: 0px 0 10px;
+
+}
+
+.remember-forgot label input{
+    color: var(--text-main-color);
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: var(--text-main-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.wrapper .btn{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow:  0 0 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.wrapper .register-link{
+    font-size: 1.45rem;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a{
+    color: var(--text-main-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover{
+    text-decoration: underline;
 }

@@ -1,29 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Estimation</title>
-    <link rel="stylesheet" href="/assets/stylesheets/app.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stock Estimation</title>
+  <link rel="stylesheet" href="/assets/stylesheets/app.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
 </head>
+
 <body>
-    
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <div class="logo">StockSense</div>
-            </div>
-            <ul class="navlinks">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Stocks</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-            <div class="login">
-                <div class="btn">Register</div> <div class="btn">Login</div>
-            </div>
-        </nav>
-    </header>
-    <script src="/assets/javascripts/app.js"></script>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <div class="logo">StockSense</div>
+      </div>
+        <box-icon id="menu-icon" name='menu'></box-icon>
+      <ul class="navlinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Stocks</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <div class="login">
+        <div class="btn">Register</div>
+        <div class="btn" id="login">Login</div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Login Form -->
+  <section class="main" id="main">
+    <div class="login-form" id="loginForm">
+      <div class="wrapper">
+        <form action="">
+          <h2>Login Now</h2>
+          <div class="input-box">
+            <label for="username">Username*</label>
+            <input type="text" name="username" id="username" placeholder="Enter Username" />
+          </div>
+          <div class="input-box">
+            <label for="password">Password*</label>
+            <input type="password" name="password" id="password" placeholder="Enter Password" />
+          </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox" name="" id="" />Remember Me</label>
+            <a href="">Forgot Password?</a>
+          </div>
+          <button type="submit" class="btn" id="submit">Login</button>
+          <div class="register-link">
+            <p>Don't have an account? <a href="">Register</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script src="/assets/javascripts/script.js"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
+
 </html>

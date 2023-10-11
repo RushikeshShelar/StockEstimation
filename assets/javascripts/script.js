@@ -32,11 +32,13 @@ loginIn.onclick = () => {
 login.onclick = () => {
     loginForm.classList.add("active");
     heroSection.classList.add("active");
+    registerForm.classList.remove("active");
 };
 
 register.onclick = () => {
     registerForm.classList.add("active");
     heroSection.classList.add("active");
+    loginForm.classList.remove("active");
 };
 
 startBtn.onclick = () => {
@@ -45,11 +47,21 @@ startBtn.onclick = () => {
     heroSection.classList.add("active");
 }
 
-const submitButton = document.querySelector(".submit");
-submitButton.addEventListener("click", (e) => {
+const loginBtn = document.querySelector("#loginBtn");
+loginBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    submitButton.onclick = () => {
+    loginBtn.onclick = () => {
         loginForm.classList.remove("active");
         heroSection.classList.remove("active");
+    };
+});
+
+const registerBtn = document.querySelector("#registerBtn");
+registerBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    registerBtn.onclick = () => {
+        loginForm.classList.remove("active");
+        heroSection.classList.remove("active");
+        registerForm.classList.remove("active");
     };
 });

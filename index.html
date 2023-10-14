@@ -14,21 +14,36 @@
   <header>
     <nav class="navbar">
       <div class="logo">
-        <div class="logo">StockSense</div>
+        <a href="/"><div class="logo">StockSense</div></a>
       </div>
-        <box-icon id="menu-icon" name='menu'></box-icon>
+      <box-icon id="menu-icon" name='menu'></box-icon>
       <ul class="navlinks">
         <li><a href="#">Home</a></li>
         <li><a href="#">Stocks</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
       <div class="login">
-        <div class="btn">Register</div>
+        <div class="btn" id="register">Register</div>
         <div class="btn" id="login">Login</div>
       </div>
     </nav>
   </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>Power of <span class="edit">Stock</span> Estimation</h1>
+      <h2>Accurate Predictions for Smart Investments</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Dolor tenetur dolorum fuga veritatis amet unde
+        porro eum?</p>
+      <div class="btns">
+        <a href="#" class="button" id="getStart"><button><span></span>Get Started</button></a>
+        <a href="#" class="button"><button><span></span>Learn More</button></a>
+      </div>
+    </div>
+  </section>
 
   <!-- Login Form -->
   <section class="main" id="main">
@@ -38,19 +53,49 @@
           <h2>Login Now</h2>
           <div class="input-box">
             <label for="username">Username*</label>
-            <input type="text" name="username" id="username" placeholder="Enter Username" />
+            <input type="text" name="username" id="username-log" placeholder="Enter Username" />
+          </div>
+          <div class="input-box">
+            <label for="password">Password*</label>
+            <input type="password" name="password"  placeholder="Enter Password" />
+          </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox" name="" id="" />Remember Me</label>
+            <a href="">Forgot Password?</a>
+          </div>
+          <button type="submit" class="btn submit" id="loginBtn">Login</button>
+          <div class="register-link">
+            <p>Don't have an account? <a href="#" id="register-in">Register</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- Registration Form -->
+    <div class="registration-form" id="registerForm">
+      <div class="wrapper">
+        <form action="">
+          <h2>Register</h2>
+          <div class="input-box">
+            <label for="username">Username*</label>
+            <input type="text" name="username" id="username-reg" placeholder="Enter Username" />
+          </div>
+          <div class="input-box">
+            <label for="email">Email*</label>
+            <input type="email" name="email" id="email" placeholder="Enter Email" />
           </div>
           <div class="input-box">
             <label for="password">Password*</label>
             <input type="password" name="password" id="password" placeholder="Enter Password" />
           </div>
           <div class="remember-forgot">
-            <label><input type="checkbox" name="" id="" />Remember Me</label>
-            <a href="">Forgot Password?</a>
+            <label><input type="checkbox" name="" id="T&C" />Accept T&C</label>
+            <a href="">View Terms & Conditions</a>
           </div>
-          <button type="submit" class="btn" id="submit">Login</button>
+          <button type="submit" class="btn submit" id="registerBtn">Register</button>
           <div class="register-link">
-            <p>Don't have an account? <a href="">Register</a></p>
+            <p>Already have an account? <a href="#" id="log-in">Sign In</a></p>
           </div>
         </form>
       </div>

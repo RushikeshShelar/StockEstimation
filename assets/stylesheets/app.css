@@ -19,7 +19,7 @@
     --main-color: #00abf0;
     --bg-color: #081b29;
     --text-main-color: #ededed;
-    --secondary-bg-color:  #112e42;
+    --secondary-bg-color: #112e42;
 }
 
 /* Whole HTML Doc */
@@ -29,9 +29,25 @@ html {
 }
 
 /* BODY */
-body {
-    background-color: var(--secondary-bg-color);
+body { 
+    position: relative;
     color: var(--text-main-color);
+}
+
+body:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.999;
+    background-image: url('../images/back2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1000;
 }
 
 /* Navabr */
@@ -49,7 +65,7 @@ body {
     z-index: 100;
 }
 
-.logo{
+.logo {
     font-size: 2rem;
     padding-left: 1rem;
     font-weight: 600;
@@ -89,7 +105,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.navbar .login .btn{
+.navbar .login .btn {
     display: inline-block;
     color: var(--text-main-color);
     padding: 0.5rem 1rem;
@@ -110,57 +126,122 @@ body {
     display: none;
 }
 
-.main{
-    background-image: url('/assets/images/bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+/* Hero Section */
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 90vh;
     width: 100%;
+    text-align: center;
+    color: var(--text-main-color);
 }
 
+.hero-content h1 {
+    font-size: 3.6rem;
+    font-weight: 600;
+}
 
-.login-form{
+.hero-content h2 {
+    font-size: 1.9rem;
+}
+
+.edit {
+    color: var(--main-color);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin: 15px auto;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+button {
+    width: 200px;
+    padding: 13px 0px;
+    text-align: center;
+    margin: 15px 5px;
+    border-radius: 25px;
+    font-weight: 600;
+    border: 2px solid var(--text-main-color);
+    background-color: transparent;
+    color: var(--text-main-color);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content .btns .a {
+    text-decoration: none;
+    color: var(--secondary-bg-color);
+}
+
+button span {
+    background-color: var(--main-color);
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+button:hover span {
+    width: 100%;
+    border: none;
+}
+
+.hero.active {
+    display: none;
+}
+
+/* Login From */
+.login-form {
     display: none;
     transition: all 0.3s ease;
- }
+}
 
- .login-form.active{
-    min-height: 90vh;  
+.login-form.active {
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     transition: all 1s ease;
 
- }
+}
 
-.wrapper{
-    background: transparent;
+.wrapper {
+    background-color: rgba(0, 0, 0, 0.6);
+    filter: blur(100%);
     border: 2px solid rgba(255, 255, 255, .2);
-    backdrop-filter: blur(100%);
     width: 35rem;
     color: var(--text-main-color);
     border-radius: 15px;
     padding: 2rem 1.5rem 1rem 1.5rem;
 }
 
-.wrapper h2{
+.wrapper h2 {
     font-size: 2rem;
     text-align: center;
 }
 
-.wrapper .input-box{
+.wrapper .input-box {
     width: 100%;
     height: 3.5rem;
     margin: 1.5rem 0 3.5rem 0;
 }
-.wrapper .input-box label{
+
+.wrapper .input-box label {
     margin: 0 0 20px 12px;
     font-size: 1.2rem;
 }
 
-.input-box input{
+.input-box input {
     width: 100%;
     height: 85%;
     background-color: transparent;
@@ -172,11 +253,11 @@ body {
     padding: 20px 45px 20px 20px;
 }
 
-.input-box input::placeholder{
+.input-box input::placeholder {
     color: var(--text-main-color);
 }
 
-.wrapper .remember-forgot{
+.wrapper .remember-forgot {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -185,47 +266,63 @@ body {
 
 }
 
-.remember-forgot label input{
+.remember-forgot label input {
     color: var(--text-main-color);
     margin-right: 3px;
 }
 
-.remember-forgot a{
+.remember-forgot a {
     color: var(--text-main-color);
     font-weight: 600;
     text-decoration: none;
 }
 
-.remember-forgot a:hover{
+.remember-forgot a:hover {
     text-decoration: underline;
 }
 
-.wrapper .btn{
+.wrapper .btn {
     width: 100%;
     height: 50px;
     background-color: #fff;
     border: none;
     outline: none;
     border-radius: 40px;
-    box-shadow:  0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     font-size: 16px;
     color: #333;
     font-weight: 600;
 }
 
-.wrapper .register-link{
+.wrapper .register-link {
     font-size: 1.45rem;
     text-align: center;
     margin: 20px 0 15px;
 }
 
-.register-link p a{
+.register-link p a {
     color: var(--text-main-color);
     text-decoration: none;
     font-weight: 600;
 }
 
-.register-link p a:hover{
+.register-link p a:hover {
     text-decoration: underline;
+}
+
+/* Registration From */
+.registration-form {
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.registration-form.active {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 1s ease;
+
 }
